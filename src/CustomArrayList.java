@@ -35,4 +35,23 @@ public class CustomArrayList<E> {
         }
         System.out.print("]");
     }
+
+    public E remove(int index){
+        if(index<0 || index >= size){
+            throw new ArrayIndexOutOfBoundsException();
+        }
+            E removed = (E) elementData[index];
+            for(int i =index; i< size-1;i++){
+                elementData[i]=elementData[i+1];
+            }
+            size--;
+        return removed;
+    }
+
+    public E get(int index){
+        if(index<0 || index >= size){
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        return (E) elementData[index];
+    }
 }
