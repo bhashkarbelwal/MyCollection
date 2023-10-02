@@ -3,11 +3,13 @@ public class MyArraylistDemo {
         CustomArrayList<String> arrayList = new CustomArrayList();
         arrayList.add("Rahul");
         arrayList.add("Ganesh");
-        arrayList.add("Bhashkar");
-        arrayList.display();
-        System.out.println("Element at index : 1 " +arrayList.get(1));
-        arrayList.remove(1);
-        System.out.println("Elements after removal");
-        arrayList.display();
+        arrayList.add("Mukesh");
+        System.out.println("ArrayList Before");
+
+        System.out.println(arrayList);
+        MyIterator<String> itr= arrayList.iterator();
+
+        System.out.println("ArrayList After");
+        System.out.println(arrayList);
     }
 }
